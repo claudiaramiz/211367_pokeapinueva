@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { searchPokemon } from './../api';
-import './navbar.css'
+import './navbar.css';
+import { useTranslation } from 'react-i18next';
 
 const Searchbar = () => {
     const [search, setSearch] = useState('');
     const [pokemon, setPokemon] = useState();
+    const { i18n, t } = useTranslation();
+
 
     const onChange = (e) => {
         console.log(e.target.value);
@@ -18,14 +21,14 @@ const Searchbar = () => {
     }
 
     return (
-        <div>
-            <div className="searchbar-container">
-                <input className="searchbar-input" placeholder="Buscar pokemon..."
+        <div className="searchbar-container">
+            <div className="searchbar">
+                <input className="searchbar-input" placeholder="Buscar pokémon"
                     onChange={onChange}
                 ></input>
             </div>
-            <div className="searchbar-btn"><button onClick={onClick}>Buscar</button></div>
-        </div>
+            <div className="searchbar-btn"><button onClick={onClick}>{t("searchbutton")}</button></div>
+        </div >
     );
 };
 

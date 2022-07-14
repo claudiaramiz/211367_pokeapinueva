@@ -3,6 +3,7 @@ import './App.css';
 import Pokedex from './components/Pokedex';
 import { getPokemonData, getPokemons } from './api';
 import { useTranslation } from 'react-i18next';
+import { ReactDOM } from 'react';
 
 const { useState, useEffect } = React;
 
@@ -33,19 +34,25 @@ function App() {
     fetchPokemons();
   }, [page])
 
+  function changeLanguage(e) {
+    i18n.changeLanguage(e.target.value);
+  }
+
   return (
     <div>
       <div>
-      <h1>{t("title")}</h1>
+        <button onClick={changeLanguage} value='en' className='btn-primary'>English</button>
+        <button onClick={changeLanguage} value='es' className='btn-primary' >Español</button>
+      </div>
+      <div>
+        <h1>{t("title")}</h1>
         <div className='App'>
-          {loading ? (<div>Cargando pokemones...</div>)
-            : (<Pokedex
-              pokemons={pokemons}
-              page={page}
-              setPage={setPage}
-              total={total}
-            />)
-          }
+          <Pokedex
+            pokemons={pokemons}
+            page={page}
+            setPage={setPage}
+            total={total}
+          />
         </div>
       </div>
     </div>
