@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
 import Pokedex from './components/Pokedex';
-import Searchbar from './components/Searchbar';
 import { getPokemonData, getPokemons } from './api';
+import { IntlProvider } from 'react-intl';
 
 const { useState, useEffect } = React;
 
@@ -35,9 +34,8 @@ function App() {
 
   return (
     <div>
-      <div><Navbar />
-        <div className='App'>
-          <Searchbar />
+      <div>
+        <div className='App'>        
           {loading ? (<div>Cargando pokemones...</div>)
             : (<Pokedex
               pokemons={pokemons}
