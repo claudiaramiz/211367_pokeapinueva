@@ -16,13 +16,13 @@ const Pokemon = (props) => {
             <div className="card-body">
                 <div className="card-top">
                     <h3>{pokemon.name}</h3>
-                    <div>
-                        # {pokemon.id}
-                    </div>
+                    <div>  # {pokemon.id}</div>
+                </div>
+                <div className="card-bottom">
                     <div className="card-type">
                         {pokemon.types.map((type, idx) => {
                             return (
-                                <div key={idx}>{type.type.name}</div>
+                                <div className="pokemon-type" key={idx}>{type.type.name}</div>
                             )
                         })}
                     </div>

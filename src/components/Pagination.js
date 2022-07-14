@@ -1,14 +1,15 @@
 import React from "react";
+import './navbar.css'
 
 const Pagination = (props) => {
 
-    const { onLeft, onRight, page, totalPages } = props;
+    const { onLeftClick, onRightClick, page, totalPages } = props;
 
     return (
         <div className="pagination">
-            <button onClick={onLeftClick}>Anterior</button>
+            <button onClick={onLeftClick} className="pagination-btn">Anterior</button>
             <div>{page} de {totalPages}</div>
-            <button onClick={onRightClick}>Siguiente</button>
+            <button onClick={onRightClick} className="pagination-btn" >Siguiente</button>
         </div>
     );
 }
