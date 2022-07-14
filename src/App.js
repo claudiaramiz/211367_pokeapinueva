@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useTransition } from 'react';
 import './App.css';
 import Pokedex from './components/Pokedex';
 import { getPokemonData, getPokemons } from './api';
+import { useTranslation } from 'react-i18next';
 
 const { useState, useEffect } = React;
 
@@ -10,6 +11,7 @@ function App() {
   const [page, setPage] = useState(0);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
+  const { i18n, t } = useTranslation();
 
   const fetchPokemons = async () => {
     try {
@@ -34,7 +36,8 @@ function App() {
   return (
     <div>
       <div>
-        <div className='App'>        
+      <h1>{t("title")}</h1>
+        <div className='App'>
           {loading ? (<div>Cargando pokemones...</div>)
             : (<Pokedex
               pokemons={pokemons}
