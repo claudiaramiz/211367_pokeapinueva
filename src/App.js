@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Pokedex from './components/Pokedex';
 import { getPokemonData, getPokemons } from './api';
-import { IntlProvider } from 'react-intl';
 
 const { useState, useEffect } = React;
 
