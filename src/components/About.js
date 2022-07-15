@@ -13,7 +13,7 @@ const About = () => {
 
     return (
         <div>
-            <div>
+            <div className="pagination-lang">
                 <button onClick={changeLanguage} value='en' className='btn-primary'>English</button>
                 <button onClick={changeLanguage} value='es' className='btn-primary' >Español</button>
             </div>

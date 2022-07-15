@@ -2,10 +2,12 @@ import React from "react";
 import './navbar.css'
 import Pagination from "./Pagination";
 import Pokemon from "./Pokemon";
+import { useTranslation } from 'react-i18next';
 
 const Pokedex = (props) => {
 
     const { pokemons, page, setPage, total, loading } = props;
+    const { i18n, t } = useTranslation();
 
     const lastPage = () => {
         const nextPage = Math.max(page - 1, 0)
@@ -17,9 +19,18 @@ const Pokedex = (props) => {
         setPage(nextPage)
     }
 
+    function changeLanguage(e) {
+        i18n.changeLanguage(e.target.value);
+    }
+
     return (
         <div>
+            <div className="pagination-lang">
+                <button onClick={changeLanguage} value='en' className='btn-primary'>English</button>
+                <button onClick={changeLanguage} value='es' className='btn-primary' >Español</button>
+            </div>
             <div className="header">
+                <h1>{t("title")}</h1>
                 <Pagination
                     page={page + 1}
                     totalPages={total}
