@@ -16,7 +16,8 @@ const Navbar = () => {
             ></img>
             </div>
             <div>
-                <Link to="/" className="btn-primary">{t("home")}</Link>
+                <Link to="/" className="btn-primary">{t("inicio")}</Link>
+                <Link to="/Home" className="btn-primary">{t("home")}</Link>
                 <Link to="/About" className="btn-primary">{t("information")}</Link>
             </div>
         </nav>

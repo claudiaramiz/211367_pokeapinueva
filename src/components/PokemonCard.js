@@ -14,7 +14,7 @@ function PokemonCard(props) {
     return (
         <div>
             <div className="pokemon-card">
-                <p onChange={buscarPokemon}>{props.pokemon ?? "No hay busqueda"}</p>
+                <p>{props.pokemon ?? "No hay busqueda"}</p>
             </div>
             <div>
                 {pokemon &&

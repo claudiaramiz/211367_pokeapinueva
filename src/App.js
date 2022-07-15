@@ -3,6 +3,7 @@ import './App.css';
 import Pokedex from './components/Pokedex';
 import { getPokemonData, getPokemons } from './api';
 import { useTranslation } from 'react-i18next';
+import Main from './components/Main';
 
 const { useState, useEffect } = React;
 

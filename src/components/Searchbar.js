@@ -8,7 +8,7 @@ function Searchbar() {
     const [search, setSearch] = useState('');
     const [pokemon, setPokemon] = useState();
     const { i18n, t } = useTranslation();
-    const [searchpokemon, setSearchPokemon] = useState('');
+    const [searchpokemon, setSearchPokemon] = useState([]);
 
 
     const onChange = (e) => {

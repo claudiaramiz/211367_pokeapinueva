@@ -18,7 +18,7 @@ const About = () => {
                 <button onClick={changeLanguage} value='es' className='btn-primary' >Español</button>
             </div>
             <div className="header">
-                <h1>{t("information")}</h1>
+                <h1>{t("about")}</h1>
             </div>
             <Informacion />
         </div>

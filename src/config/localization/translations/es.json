@@ -5,8 +5,10 @@
     "searchbutton": "Buscar",
     "placesearch":"Buscar pokémon...",
     "titlebig": "Pokeapi",
-    "home": "Inicio",
-    "information": "Acerca de",
+    "inicio": "Inicio",
+    "home": "Home",
+    "information": "211367",
+    "about": "Acerca de",
     "search": "Buscar",
     "other": "Otros"
 }
