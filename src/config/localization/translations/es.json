@@ -6,9 +6,15 @@
     "placesearch":"Buscar pokémon...",
     "titlebig": "Pokeapi",
     "inicio": "Inicio",
-    "home": "Home",
+    "home": "Pokemon",
     "information": "211367",
     "about": "Acerca de",
     "search": "Buscar",
-    "other": "Otros"
+    "other": "Otros",
+    "footer": "Página realizada por:",
+    "aboutinformation1" : "Oriunda de San Luis Potosí, S.L.P. Tengo 23 años en esta ciudad, radicando actualmente aquí. Adaptarme a las costumbres y pequeños regionalismos no fue tan sencillo.",
+    "aboutinformation2" : "Soy una persona que actualmente trabaja y estudia, madre de familia de 3 pequeñas. Me apasiona mi trabajo, creo en el constante crecimiento en cualquier ambito: trabajo, personal, emocional, etc.",
+    "aboutinformation3" : "Disfruto la música, me encanta bailar y convivir con mis familiares y amigos, disfruto la lectura, es una manera fascinante de conocer muchos lugares, épocas y pensamientos diferentes.",
+    "aboutinformation4" : "Como reto personal me impuse terminar al menos una maestría, de ser posible un doctorado.",
+    "aboutinformation5" : "En la actualidad estoy cursando el 9 cuatrimestre para terminar la ingeniería en sistemas."
 }

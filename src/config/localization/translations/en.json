@@ -6,9 +6,15 @@
     "placesearch":"Search pokemon...",
     "titlebig": "Pokeapi",
     "inicio": "Start",
-    "home": "Home",
+    "home": "Pokemon",
     "information": "211367",
     "about": "About",
     "search": "Search",
-    "other": "Other"
+    "other": "Other",
+    "footer": "Page made by:",
+    "aboutinformation1" : "I was born in San Luis Potosí, S.L.P. I am 23 years old in this city, currently residing here. Adapting to customs and small regionalisms was not so easy.",
+    "aboutinformation2" : "I am a person who currently works and studies, mother of 3 children. I am passionate about my work, I believe in constant growth in any field: work, personal, emotional, etc.",
+    "aboutinformation3" : "I enjoy music, I love dancing and spending time with my family and friends, I enjoy reading, it's a fascinating way to get to know many different places, times and thoughts.",
+    "aboutinformation4" : "As a personal challenge, I decided to finish at least a master's degree, if possible a doctorate.",
+    "aboutinformation5" : "Currently I am studying the 9 cuatrimestre to finish systems engineering."
 }

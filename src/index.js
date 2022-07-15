@@ -8,11 +8,10 @@ import Navbar from './components/Navbar';
 import Searchbar from './components/Searchbar';
 import About from './components/About';
 import Home from './Home'
+import Footer from './components/Footer';
 
 import { I18nextProvider } from 'react-i18next';
 import i18n from './config/localization/i18n';
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -27,6 +26,7 @@ root.render(
           <Route path='/Home' element={<Home></Home>}></Route>
           <Route path='/About' element={<About></About>}></Route>
         </Routes>
+        <Footer />
       </I18nextProvider>
     </BrowserRouter>
   </React.StrictMode>

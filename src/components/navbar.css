@@ -188,3 +188,10 @@
     color: #2e518b;
     background-color: #ffffff;
 }
+
+.footer{
+    padding: 10px;
+    background-color: #2e518b;
+    color: #ffffff;
+    font-weight: bold;
+}

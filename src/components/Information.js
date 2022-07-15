@@ -8,7 +8,6 @@ const Information = () => {
             <Navbar />
             <div className="main">
                 <h3>211367 Claudia Ramirez</h3>
-
             </div>
             <Informacion />
         </div>
