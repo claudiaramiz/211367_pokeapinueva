@@ -1,8 +1,9 @@
-nav {
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding: 10px;
 }
 
 .navbar-image {
@@ -157,6 +158,22 @@ nav {
     color: #ffffff;
     text-decoration: none;
     text-transform: capitalize;
-    font-family: 'Helvetica', sans-serif;
     border-radius: 50px;
+}
+
+.about-header
+{
+    border: 1px solid #2e518b;
+    padding: 10px;
+    background-color: #2e518b;
+    color: #ffffff;
+    text-decoration: dashed;
+    text-transform: capitalize;
+}
+
+.information-text
+{
+    padding: 10px;
+    color: #2e518b;
+    background-color: #ffffff;
 }

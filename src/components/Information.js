@@ -1,5 +1,5 @@
 import React from "react";
-import Informacion from "../Informacion";
+import Informacion from './Informacion'
 import Navbar from "./Navbar";
 
 const Information = () => {

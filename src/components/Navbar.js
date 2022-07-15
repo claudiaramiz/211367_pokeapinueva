@@ -1,12 +1,7 @@
 import React from 'react'
 import './navbar.css';
 import { Link } from 'react-router-dom';
-
-import App from '../App';
-import Informacion from './Information';
-
 import { useTranslation } from 'react-i18next';
-
 
 const Navbar = () => {
 
@@ -21,10 +16,11 @@ const Navbar = () => {
             ></img>
             </div>
             <div>
-                <Link to="/home" className="btn-primary">{t("home")}</Link>
-                <Link to="/Information" className="btn-primary">{t("information")}</Link>
+                <Link to="/" className="btn-primary">{t("home")}</Link>
+                <Link to="/About" className="btn-primary">{t("information")}</Link>
             </div>
         </nav>
+        
     );
 }
 

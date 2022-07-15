@@ -1,13 +1,13 @@
 import React from "react";
-import './App.css';
+import './navbar.css';
 
 
 const Informacion = () => {
 
     return (
         <div className="body">
-            <div className="App-header">
-                <h2>Claudia Melissa Ramirez Martinez</h2>
+            <div className="about-header">
+                <h2>Claudia Melissa Ramirez Martinez 211367</h2>
             </div>
             <div>
                 <br /><br />
