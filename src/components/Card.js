@@ -23,29 +23,29 @@ const Card = ({ pokemon, loading, infoPokemon, page, setPage, total }) => {
 
     return (
         <>
-                <div className="btn-group" >
-                    <Pagination
-                        page={page + 1}
-                        totalPages={total}
-                        onLeftClick={lastPage}
-                        onRightClick={nextPage}
-                    /></div>
-                {
-                    loading ? <div>Cargando pokemones ...</div>
-                        :
-                        pokemon.map((item) => {
-                            return (
-                                <>
-                                    <div className="card" key={item.id} onClick={() => infoPokemon(item)}>
-                                        <h2>{item.id}</h2>
-                                        <img src={item.sprites.front_default} alt={item.name} />
-                                        <h2>{item.name}</h2>
-                                    </div>
-                                </>
-                            )
+            <div className="btn-group" >
+                <Pagination
+                    page={page + 1}
+                    totalPages={total}
+                    onLeftClick={lastPage}
+                    onRightClick={nextPage}
+                /></div>
+            {
+                loading ? <div>Cargando pokemones ...</div>
+                    :
+                    pokemon.map((item) => {
+                        return (
+                            <div key={item.name}>
+                                <div className="card" key={item.id} onClick={() => infoPokemon(item)}>
+                                    <h2>{item.id}</h2>
+                                    <img src={item.sprites.front_default} alt={item.name} />
+                                    <h2>{item.name}</h2>
+                                </div>
+                            </div>
+                        )
 
-                        })
-                }
+                    })
+            }
         </>
     )
 }

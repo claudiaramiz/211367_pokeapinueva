@@ -7,6 +7,7 @@
     padding: 10px;
     justify-content: space-between;
     align-content: space-between;
+    margin: 10px;
 }
 
 .navbar {
@@ -20,6 +21,7 @@
 
 .navbar-image {
     width: 164px;
+    padding: 10px;
 }
 
 .containerSearchBar {
@@ -52,6 +54,7 @@
     text-transform: capitalize;
     font-family: 'Helvetica', sans-serif;
     border-radius: 50px;
+    margin: 10px;
 }
 
 .searchbar-input {
