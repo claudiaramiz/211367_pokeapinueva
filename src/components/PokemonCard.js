@@ -8,22 +8,24 @@ const PokemonCard = ({ data }) => {
     return (
         <>
             {
-                (!data) ?  <h1>{t("pokemessage")}</h1> : (
+                (!data) ? "" : (
                     <>
                         <div className="pokecontainer">
-                            <h1>{data.name}</h1>
-                            <div className="pokeLeft">
-                                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${data.id}.png`} alt={data.name} /></div>
-                        </div>
-                        <div className="pokeRight">
-                            <div>Id: {data.id}</div>
-                            <div>{t("pokename")}: {data.name}</div>
-                            <div>{t("pokeweight")}: {data.weight}</div>
-                            <div>{t("poketype")}:  {data.types.map((type, idx) => {
-                                return (
-                                    <div className="pokemon-type" key={idx}>{type.type.name}</div>
-                                )
-                            })}</div>
+                            <div>
+                                <h1>{data.name}</h1>
+                                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${data.id}.png`} alt={data.name} />
+                            </div>
+                            <div>
+                                <div>Id: {data.id}</div>
+                                <div>{t("pokename")}: {data.name}</div>
+                                <div>{t("pokeweight")}: {data.weight}</div>
+                                <div>{t("poketype")}:  {data.types.map((type, idx) => {
+                                    return (
+                                        <div className="pokemon-type" key={idx}>{type.type.name}</div>
+                                    )
+                                })}
+                                </div>
+                            </div>
                         </div>
                     </>
                 )}
