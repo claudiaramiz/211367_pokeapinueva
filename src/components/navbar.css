@@ -207,18 +207,41 @@
     background-color: #ffffff;
 }
 
-.footer {
-    padding: 10px;
+.footer-body {
     background-color: #2e518b;
     color: #ffffff;
     font-weight: bold;
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
 }
 
 .pokecontainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    text-transform: capitalize;
 }
 
 .pokeRight {
     text-transform: capitalize;
+}
+
+.containerNav {
+    width: 90%;
+    margin: auto;
+    background-color: #9E9E9E;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.containerNav p{
+    font-size: 14px;
+    font-weight: 700;
+    color: #2e518b;
 }

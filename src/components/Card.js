@@ -1,11 +1,8 @@
 import React from "react";
 import './style.css'
-import { useTranslation } from 'react-i18next';
 import Pagination from "./Pagination";
 
 const Card = ({ pokemon, loading, infoPokemon, page, setPage, total }) => {
-
-    const { i18n, t } = useTranslation();
 
     const lastPage = () => {
         const nextPage = Math.max(page - 1, 0)
@@ -15,10 +12,6 @@ const Card = ({ pokemon, loading, infoPokemon, page, setPage, total }) => {
     const nextPage = () => {
         const nextPage = Math.min(page + 1, total)
         setPage(nextPage)
-    }
-
-    function changeLanguage(e) {
-        i18n.changeLanguage(e.target.value);
     }
 
     return (

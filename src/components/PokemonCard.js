@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useTranslation } from 'react-i18next';
-import './navbar.css'
+import './navbar.css';
+import { ThemeContext } from '../Context/ContextoGeneral';
 
 const PokemonCard = ({ data }) => {
     const { t } = useTranslation();
+    const { mensaje } = useContext(ThemeContext);
 
     return (
         <>
             {
-                (!data) ? "" : (
+                (!data) ? <h3>{mensaje}</h3> : (
                     <>
                         <div className="pokecontainer">
                             <div>

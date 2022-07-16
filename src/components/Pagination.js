@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Pagination = (props) => {
 
     const { onLeftClick, onRightClick, page, totalPages } = props;
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className="pagination">

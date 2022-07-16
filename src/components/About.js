@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Informacion from './Informacion'
 import './navbar.css';
 import { useTranslation } from 'react-i18next';
-
+import { ThemeContext } from '../Context/ContextoGeneral';
 
 const About = () => {
     const { i18n, t } = useTranslation();
+    const { setUltimaPagina } = useContext(ThemeContext);
+
+    useEffect(() => {
+        setUltimaPagina('Acerca de');
+    }, [])
 
     function changeLanguage(e) {
         i18n.changeLanguage(e.target.value);
-      }
+    }
 
     return (
         <div>

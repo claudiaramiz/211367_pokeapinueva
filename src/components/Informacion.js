@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const Informacion = () => {
 
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className="body">

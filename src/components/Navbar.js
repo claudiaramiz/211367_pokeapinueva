@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const Navbar = () => {
 
     let imgUrl = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <nav className="navbar">

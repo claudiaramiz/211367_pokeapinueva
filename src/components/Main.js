@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import Card from "./Card";
 import { useState } from "react";
 import { getPokemonData, getPokemons } from "../api";
 import Pokeinfo from "./Pokeinfo";
 import { useTranslation } from 'react-i18next';
 import './navbar.css'
+import { ThemeContext } from "../Context/ContextoGeneral";
 
 const Main = () => {
     const [pokeData, setPokeData] = useState([]);
@@ -12,7 +13,8 @@ const Main = () => {
     const [total, setTotal] = useState(0);
     const [loading, setLoading] = useState(true);
     const [pokeDex, setPokedex] = useState();
-    const { i18n, t } = useTranslation();
+    const { i18n } = useTranslation();
+    const { setUltimaPagina } = useContext(ThemeContext);
 
     function changeLanguage(e) {
         i18n.changeLanguage(e.target.value);
@@ -36,6 +38,8 @@ const Main = () => {
 
     useEffect(() => {
         fetchPokemons();
+        setUltimaPagina('Pokecard');
+
     }, [page])
 
     return (
@@ -45,7 +49,7 @@ const Main = () => {
                     <div className="btn-group-lang">
                         <button onClick={changeLanguage} value='en' className='btn-lang'>English</button>
                         <button onClick={changeLanguage} value='es' className='btn-lang' >Español</button>
-                        </div>
+                    </div>
                     <Card pokemon={pokeData} loading={loading}
                         infoPokemon={poke => setPokedex(poke)}
                         page={page}

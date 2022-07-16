@@ -1,19 +1,17 @@
-import React, { useTransition } from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import Pokedex from './components/Pokedex';
 import { getPokemonData, getPokemons } from './api';
-import { useTranslation } from 'react-i18next';
-import Main from './components/Main';
+import { ThemeContext } from './Context/ContextoGeneral';
 
 const { useState, useEffect } = React;
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
-  const [pokemon, setPokemon] = useState([]);
   const [page, setPage] = useState(0);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
-  const { i18n, t } = useTranslation();
+  const { setUltimaPagina } = useContext(ThemeContext);
 
   const fetchPokemons = async () => {
     try {
@@ -33,6 +31,7 @@ function App() {
 
   useEffect(() => {
     fetchPokemons();
+    setUltimaPagina('Inicio');
   }, [page])
 
   return (
