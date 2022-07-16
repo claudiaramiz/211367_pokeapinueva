@@ -1,7 +1,10 @@
 import React from "react";
 import './style.css'
+import { useTranslation } from 'react-i18next';
 
 const Pokeinfo = ({ data }) => {
+    const { t } = useTranslation();
+
     return (
         <>
             {
@@ -23,11 +26,18 @@ const Pokeinfo = ({ data }) => {
                             }
                         </div>
                         <div className="base-stat">
+                            <div><h3>{t("pokeweight")}: {data.weight} lbs</h3></div>
+                            <div><h3>{t("poketype")}: {data.types.map((type, idx) => {
+                                return (
+                                    <div className="pokemon-type" key={idx}>{type.type.name}</div>
+                                )
+                            })}</h3>
+                            </div>
                             {
                                 data.stats.map(poke => {
                                     return (
                                         <>
-                                            <h3>{poke.stat.name}:{poke.base_stat}</h3>
+                                            <h3>{poke.stat.name}:{poke.base_stat}</h3>                                     
                                         </>
                                     )
                                 })
