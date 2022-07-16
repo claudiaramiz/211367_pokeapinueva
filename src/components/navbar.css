@@ -1,9 +1,21 @@
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: #2e518b;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
 .navbar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
     padding: 10px;
+    background-color: #2e518b;
+    color: #ffffff;
+    width: 100%;
 }
 
 .navbar-image {
@@ -156,19 +168,21 @@
     padding: 5px;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
+.btn-primary {
+    border: 1px solid #ffffff;
     padding: 10px;
-    align-items: center;
-    width: max-content;
+    color: #2e518b;
+    background-color: #ffffff;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 50px;
 }
 
-.btn-primary {
+.btn-lang {
     border: 1px solid #2e518b;
     padding: 10px;
-    background-color: #2e518b;
     color: #ffffff;
+    background-color: #2e518b;
     text-decoration: none;
     text-transform: capitalize;
     border-radius: 50px;
@@ -194,4 +208,18 @@
     background-color: #2e518b;
     color: #ffffff;
     font-weight: bold;
+}
+
+.pokecontainer {
+    width: 50%;
+    margin: auto;
+    display: flex;
+}
+
+.pokeLeft, .pokeRight{
+    flex-basis: 50%;
+}
+
+.pokeRight{
+    text-transform: capitalize;
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { getPokemonData, getPokemons } from "../api";
 import Pokeinfo from "./Pokeinfo";
 import { useTranslation } from 'react-i18next';
+import './navbar.css'
 
 const Main = () => {
     const [pokeData, setPokeData] = useState([]);
@@ -42,8 +43,8 @@ const Main = () => {
             <div className="container">
                 <div className="left-content">
                     <div className="btn-group-lang">
-                        <button onClick={changeLanguage} value='en' className='btn-primary'>English</button>
-                        <button onClick={changeLanguage} value='es' className='btn-primary' >Español</button>
+                        <button onClick={changeLanguage} value='en' className='btn-lang'>English</button>
+                        <button onClick={changeLanguage} value='es' className='btn-lang' >Español</button>
                         </div>
                     <Card pokemon={pokeData} loading={loading}
                         infoPokemon={poke => setPokedex(poke)}
@@ -52,7 +53,6 @@ const Main = () => {
                         total={total} />
                 </div>
                 <div className="right-content">
-
                     <Pokeinfo data={pokeDex} />
                 </div>
             </div>

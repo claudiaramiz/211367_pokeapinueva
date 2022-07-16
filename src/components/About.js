@@ -14,8 +14,8 @@ const About = () => {
     return (
         <div>
             <div className="pagination-lang">
-                <button onClick={changeLanguage} value='en' className='btn-primary'>English</button>
-                <button onClick={changeLanguage} value='es' className='btn-primary' >Español</button>
+                <button onClick={changeLanguage} value='en' className='btn-lang'>English</button>
+                <button onClick={changeLanguage} value='es' className='btn-lang' >Español</button>
             </div>
             <div className="header">
                 <h1>{t("about")}</h1>

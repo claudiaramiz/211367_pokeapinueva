@@ -1,44 +1,34 @@
 import React, { useState } from "react";
-import { searchPokemon } from "../api";
+import { useTranslation } from 'react-i18next';
+import './navbar.css'
 
-function PokemonCard(props) {
-
-    const [pokemon, setPokemon] = useState()
-
-    const buscarPokemon = async (pokemon) => {
-        const data = await searchPokemon(pokemon);
-        setPokemon(data);
-        console.log(data);
-    }
+const PokemonCard = ({ data }) => {
+    const { t } = useTranslation();
 
     return (
-        <div>
-            <div className="pokemon-card">
-                <p>{props.pokemon ?? "No hay busqueda"}</p>
-            </div>
-            <div>
-                {pokemon &&
-                    <div>
-                        <div>Id: {pokemon.id}</div>
-                        <div>Nombre: {pokemon.name}</div>
-                        <div>Peso: {pokemon.weight}</div>
-                        <div>Elemento:    {pokemon.types.map((type, idx) => {
-                            return (
-                                <div className="pokemon-type" key={idx}>{type.type.name}</div>
-                            )
-                        })}</div>
-                        <div>
-                            <img
-                                src={pokemon.sprites.front_default}
-                                alt={pokemon.name}
-                                className="pokemon-img"
-                            ></img>
+        <>
+            {
+                (!data) ?  <h1>{t("pokemessage")}</h1> : (
+                    <>
+                        <div className="pokecontainer">
+                            <h1>{data.name}</h1>
+                            <div className="pokeLeft">
+                                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${data.id}.png`} alt={data.name} /></div>
                         </div>
-                    </div>
-                }
-            </div>
-        </div>
-    );
-};
+                        <div className="pokeRight">
+                            <div>Id: {data.id}</div>
+                            <div>{t("pokename")}: {data.name}</div>
+                            <div>{t("pokeweight")}: {data.weight}</div>
+                            <div>{t("poketype")}:  {data.types.map((type, idx) => {
+                                return (
+                                    <div className="pokemon-type" key={idx}>{type.type.name}</div>
+                                )
+                            })}</div>
+                        </div>
+                    </>
+                )}
+        </>
+    )
+}
 
 export default PokemonCard;
