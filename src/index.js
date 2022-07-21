@@ -28,8 +28,8 @@ root.render(
           <Searchbar />
           <Routes>
             <Route path='/' element={<App></App>}></Route>
-            <Route path='/Home' element={<Home></Home>}></Route>
-            <Route path='/About' element={<About></About>}></Route>
+            <Route path='/Pokemon' element={<Home></Home>}></Route>
+            <Route path='/211367' element={<About></About>}></Route>
           </Routes>
           <Footer />
         </I18nextProvider>
